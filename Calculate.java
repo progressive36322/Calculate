@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.InputMismatchException;
@@ -5,6 +6,9 @@ import java.util.Scanner;
 
 class Calculate {
     public static void main(String[] args) throws Exception {
+        JFrame jFrame = getFrame();
+
+
         String a;
         String b;
         String znak = "";
@@ -52,5 +56,13 @@ class Calculate {
         }
         fileReader.close();
         fileWriter.close();
+    }
+    static JFrame getFrame() {
+        JFrame jFrame = new JFrame();
+        jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jFrame.setSize(300, 300);
+        jFrame.setBounds(250, 250, 250, 250);
+        return jFrame;
     }
 }
